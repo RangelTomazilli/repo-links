@@ -1,8 +1,6 @@
 "use client";
 
-import { CMSIcon } from "./cms-icon";
-
-export default function ({ text, icon, link, iconColorClass }) {
+export default function ButtonLinkWithIcon({ text, icon, link, iconColorClass }) {
     const handle = () => {
         const handleLink = link;
         window.open(handleLink, "_blank");
