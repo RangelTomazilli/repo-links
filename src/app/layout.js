@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-hero-image-bg`}>
         <div className='w-full'>
           {/* <NavBarTest /> */}
         </div>
