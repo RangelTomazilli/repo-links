@@ -27,7 +27,7 @@ const getData = async () => {
 
 export default async function Home() {
   const response = await getData();
-  console.log(29, response.home.logoImage.url);
+  console.log(30, response.home.links);
   return (
     <main className="min-h-screen flex flex-col items-center pt-7 px-6 gap-5">
       <Image
@@ -42,7 +42,7 @@ export default async function Home() {
       <div className="flex flex-col items-center justify-center gap-5 w-full lg:w-1/2">
         {
           response.home.links.map(content => (
-            <ButtonLinkWithIcon key={content.url} text={content.name} icon={content.iconSvg} link={content.url} iconColorClass={content.iconColor} />
+            <ButtonLinkWithIcon key={content.name} text={content.name} icon={content.iconSvg} link={content.url} iconColorClass={content.iconColor} />
           ))
         }
       </div>
