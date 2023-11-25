@@ -27,15 +27,16 @@ const getData = async () => {
 
 export default async function Home() {
   const response = await getData();
-  console.log(30, response.home.links);
   return (
     <main className="min-h-screen flex flex-col items-center pt-7 px-6 gap-5">
-      <Image
-        src="/debora-tomazilli-logo.svg"
-        alt="Logo Debora Tomazilli"
-        width={200}
-        height={400}
-      />
+      <div>
+        <Image
+          src="/debora-tomazilli-logo.svg"
+          alt="Logo Debora Tomazilli"
+          width={200}
+          height={400}
+        />
+      </div>
       <div>
         <div className='font-semibold text-gray-700 text-center'> <RichText content={response.home.introduction.raw} /></div>
       </div>
